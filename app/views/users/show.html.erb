@@ -8,5 +8,13 @@
 <img src="<%=(url_for(@user.avatar))%>" alt="This is the user's profile picture">
 <% end %>
 
+  <% @user.pictures.each do |t| %>
+  <%= image_tag t %>"
+  <% end %>
+
+
+
+
+
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

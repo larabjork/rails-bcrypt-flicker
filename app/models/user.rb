@@ -5,6 +5,7 @@ class User < ApplicationRecord
   before_save :encrypt_password
 
   has_one_attached :avatar
+  has_many_attached :pictures
 
   def encrypt_password
     self.password_salt = BCrypt::Engine.generate_salt
