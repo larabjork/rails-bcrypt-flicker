@@ -4,6 +4,9 @@
 
 <h1><%= @user.name%></h1>
 <h1>Admin = <%= @user.admin%></h1>
+<% if @user.avatar.attached? %>
+<img src="<%=(url_for(@user.avatar))%>" alt="This is the user's profile picture">
+<% end %>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
