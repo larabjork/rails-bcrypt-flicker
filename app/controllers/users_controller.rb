@@ -1,5 +1,8 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :authorize, only: [:show]
+  before_action :admin_auth, only: [:edit]
+
 
   # GET /users
   def index
@@ -8,6 +11,8 @@ class UsersController < ApplicationController
 
   # GET /users/1
   def show
+
+
   end
 
   # GET /users/new
@@ -46,6 +51,8 @@ class UsersController < ApplicationController
     @user.destroy
     redirect_to users_url, notice: 'User was successfully destroyed.'
   end
+
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
