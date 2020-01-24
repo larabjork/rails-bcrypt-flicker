@@ -82,3 +82,24 @@ div {
 label {
   display: block;
 }
+
+.profile {
+  border-radius: 50%;
+  width: 10%;
+  height: auto;
+  float: left;
+}
+
+.pix-format {
+  width: 100px;
+  height: auto;
+}
+
+.image-area {
+  display: flex;
+}
+
+.image-area img {
+  width: 20%;
+  padding: 10px;
+}

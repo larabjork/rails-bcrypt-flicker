@@ -2,19 +2,21 @@
 
 
 
+<% if @user.avatar.attached? %>
+
+
+<img src="<%=(url_for(@user.avatar))%>" alt="This is the user's profile picture" class="profile">
+<% end %>
 <h1><%= @user.name%></h1>
 <h1>Admin = <%= @user.admin%></h1>
-<% if @user.avatar.attached? %>
-<img src="<%=(url_for(@user.avatar))%>" alt="This is the user's profile picture">
-<% end %>
+<br>
 
+<div class="image-area">
   <% @user.pictures.each do |t| %>
-  <%= image_tag t %>"
+  <%= image_tag t %>
   <% end %>
-
-
-
-
+<br>
+</div>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
