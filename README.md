@@ -2,7 +2,6 @@
 ## Created by Lara Bjork and Bryon Burke on January 23, 2020
 ## Project Description: An app that lets users upload their photos to share with the world
 
-# Project Description
 This project was completed as part of the in-class curriculum at Epicodus during a week focused on Rails Authentication and Authorization. The assignment description was as follows:
 
 _Make an app that lets users upload their photos to share with the world. Feel free to clone Flickr exactly or make a variation for a specific audience._
